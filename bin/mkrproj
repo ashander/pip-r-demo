@@ -1,0 +1,8 @@
+#! /usr/bin/env Rscript
+args <- commandArgs(trailingOnly=TRUE)
+if (length(args) < 2) {
+  cat("usage:\n  mkrproj --args <directory>\n")
+} else {
+  dir = args[2]
+  devtools::create(dir)
+}
